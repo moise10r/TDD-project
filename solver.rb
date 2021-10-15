@@ -1,11 +1,10 @@
 class Solver
-
-  def factorial(N)
-    raise StandardError if N.negative?
+  def factorial(num)
+    raise StandardError if num.negative?
 
     result = 1
 
-    while N.positive?
+    while num.positive?
       result *= num
       num -= 1
     end
@@ -17,19 +16,18 @@ class Solver
     word.reverse
   end
 
-  def fizzbuzz(N)
-    is_divisible_by_3 = N.modulo(3).zero?
-    is_divisible_by_5 = N.modulo(5).zero?
+  def fizzbuzz(num)
+    is_div_by3 = num.modulo(3).zero?
+    is_div_by5 = num.modulo(5).zero?
 
-    if is_divisible_by_3 && is_divisible_by_5
+    if is_div_by3 && is_div_by5
       'fizzbuzz'
-    elsif is_divisible_by_5
+    elsif is_div_by5
       'buzz'
-    elsif is_divisible_by_3
+    elsif is_div_by3
       'fizz'
     else
-      N.to_s
+      num.to_s
     end
   end
-
 end
