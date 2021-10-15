@@ -11,4 +11,9 @@ describe Solver do
     end
   end
 
+  describe '#factorial' do
+    it 'returns the factorial of 6' do
+      expect(@solver.factorial(6)).to eq 720
+    end
+  end
 end
