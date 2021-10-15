@@ -17,4 +17,19 @@ class Solver
     word.reverse
   end
 
+  def fizzbuzz(N)
+    is_divisible_by_3 = N.modulo(3).zero?
+    is_divisible_by_5 = N.modulo(5).zero?
+
+    if is_divisible_by_3 && is_divisible_by_5
+      'fizzbuzz'
+    elsif is_divisible_by_5
+      'buzz'
+    elsif is_divisible_by_3
+      'fizz'
+    else
+      N.to_s
+    end
+  end
+
 end
