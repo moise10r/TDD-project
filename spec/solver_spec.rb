@@ -26,4 +26,21 @@ describe Solver do
       expect(@solver.reverse('hello')).to eq 'olleh'
     end
   end
+
+  describe '#fizzbuzz' do
+    it 'when N is divisible by 3, return fizz' do
+      expect(@solver.fizzbuzz(6)).to eq 'fizz'
+    end
+
+    it 'when N is divisible by 5, return buzz' do
+      expect(@solver.fizzbuzz(20)).to eq 'buzz'
+    end
+
+    it 'when N is divisible by 3 and 5, return fizzbuzz' do
+      expect(@solver.fizzbuzz(15)).to eq 'fizzbuzz'
+    end
+
+    it 'when N is not divisible by either 3 or 5, return N' do
+      expect(@solver.fizzbuzz(7)).to eq '7'
+    end
 end
